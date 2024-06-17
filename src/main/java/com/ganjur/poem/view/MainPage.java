@@ -15,6 +15,7 @@ public class MainPage extends JFrame{
 
 	private FalPage fp;
 	private PoetPage pp;
+	private SearchPage sp;
 
 
 	private Component currentPane; // required for navigation
@@ -32,6 +33,11 @@ public class MainPage extends JFrame{
 		gotoPage(this.pp);
 	}
 	
+	public void gotoSearchPage(){
+		gotoPage(this.sp);
+	}
+
+
 	private void init(){
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.setMinimumSize(new Dimension(X,Y));
