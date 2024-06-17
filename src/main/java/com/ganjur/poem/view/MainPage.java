@@ -39,11 +39,29 @@ public class MainPage extends JFrame{
 
 
 	private void init(){
+
+		initPanels();
+
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.setMinimumSize(new Dimension(X,Y));
 		this.setLocationRelativeTo(null); // appear at centre
 		this.setVisible(true);
 	}
+
+	private void initPanels(){
+		
+		// set header (will not change during program)
+		setLayout(new BorderLayout());
+		add(new Header(this),BorderLayout.NORTH);
+
+		// these will be changed during runtime
+		this.fp=new FalPage();
+		this.pp=new PoetPage();
+		this.sp=new SearchPage();
+
+		gotoFalPage();
+	}
+
 
 	private void gotoPage(JPanel page){
 		if(page==currentPane) return ;
