@@ -1,3 +1,5 @@
+package com.ganjur.poem.view;
+
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
@@ -11,10 +13,23 @@ public class MainPage extends JFrame{
 	public static final int X=1024;
 	public static final int Y=600;
 
-	
+	private FalPage fp;
+	private PoetPage pp;
+
+
+	private Component currentPane; // required for navigation
+
 	public MainPage(){
 		super();
 		init();
+	}
+
+	public void gotoFalPage(){
+		gotoPage(this.fp);
+	}
+
+	public void gotoPoetPage(){
+		gotoPage(this.pp);
 	}
 	
 	private void init(){
@@ -22,5 +37,20 @@ public class MainPage extends JFrame{
 		this.setMinimumSize(new Dimension(X,Y));
 		this.setLocationRelativeTo(null); // appear at centre
 		this.setVisible(true);
+	}
+
+	private void gotoPage(JPanel page){
+		if(page==currentPane) return ;
+		if(currentPane!=null) // beware of first init
+			this.remove(currentPane);
+		
+		// change the center of out layout
+		this.add(page,BorderLayout.CENTER);
+		this.currentPane=page;
+		
+		// necessary for changes to take place
+		this.validate();
+		this.repaint();
+
 	}
 }
