@@ -17,7 +17,6 @@ public class MainPage extends JFrame{
 	private PoetPage pp;
 	private SearchPage sp;
 
-
 	private Component currentPane; // required for navigation
 
 	public MainPage(){
@@ -37,9 +36,7 @@ public class MainPage extends JFrame{
 		gotoPage(this.sp);
 	}
 
-
 	private void init(){
-
 		initPanels();
 
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -49,7 +46,6 @@ public class MainPage extends JFrame{
 	}
 
 	private void initPanels(){
-		
 		// set header (will not change during program)
 		setLayout(new BorderLayout());
 		add(new Header(this),BorderLayout.NORTH);
@@ -61,7 +57,6 @@ public class MainPage extends JFrame{
 
 		gotoFalPage();
 	}
-
 
 	private void gotoPage(JPanel page){
 		if(page==currentPane) return ;
@@ -75,6 +70,5 @@ public class MainPage extends JFrame{
 		// necessary for changes to take place
 		this.validate();
 		this.repaint();
-
 	}
 }

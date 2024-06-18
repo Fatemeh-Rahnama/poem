@@ -100,6 +100,4 @@ public class FalPage extends JPanel{
 		this.resTA.setText(p.toString());
 		this.resTA.setCaretPosition(0);
 	}
-
-
 }

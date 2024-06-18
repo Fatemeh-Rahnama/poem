@@ -35,12 +35,12 @@ public class PoetPage extends JPanel{
 	private static final String POETS_LIST_PATH="poets.json";
 	
 	private JScrollPane outP;
-		private JTextArea outTA; // for output
+	private JTextArea outTA; // for output
 
 	private JPanel inputP;
-		private JLabel inputL;
-		private JScrollPane inputListScroll;
-			private JList inputList; // for input
+	private JLabel inputL;
+	private JScrollPane inputListScroll;
+	private JList inputList; // for input
 	
 	public PoetPage(){
 		super();

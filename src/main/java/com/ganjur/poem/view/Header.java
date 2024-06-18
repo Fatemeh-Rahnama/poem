@@ -22,7 +22,6 @@ public class Header extends JPanel{
 	private JButton falNavBtn;
 	private JButton searchNavBtn;
 	private JButton poetNavBtn;
-
 	private JLabel pageLabel;
 
 	public Header(MainPage mp){
@@ -75,5 +74,4 @@ public class Header extends JPanel{
 		});
 		this.add(poetNavBtn);
 	}
-
 }

@@ -23,12 +23,12 @@ public class SearchPage extends JPanel{
 	private static final String PAGE_SIZE="5";
 	
 	private JPanel inputP;
-		private JLabel inputL;
-		private JTextField inputTF;
-		private JButton submitBtn;
+	private JLabel inputL;
+	private JTextField inputTF;
+	private JButton submitBtn;
 
 	private JScrollPane outP;
-		private JTextArea outTA; // for output
+	private JTextArea outTA; // for output
 
 	public SearchPage(){
 		super();
@@ -121,5 +121,4 @@ public class SearchPage extends JPanel{
 		this.outTA.setText(sb.toString());
 		this.outTA.setCaretPosition(0);
 	}
-
 }
